@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     var families : [String] = []
     var fonts : [String : [String]] = [:]
     
@@ -31,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    // MARK: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -44,6 +48,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = families[indexPath.row]
         cell.textLabel?.font = UIFont(name: families[indexPath.row], size: 20)
         return cell
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Método para pasar datos en el segue
+        
+        if segue.identifier == "segueForDetail"{
+            let destinationViewController = segue.destination as! DetailFontsViewController
+            let idx = tableView.indexPathForSelectedRow!.row
+            destinationViewController.familyName = families[idx]
+            destinationViewController.fonts = fonts[families[idx]]!
+
+        }
     }
 
 

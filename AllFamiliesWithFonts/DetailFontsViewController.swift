@@ -10,8 +10,17 @@ import UIKit
 
 class DetailFontsViewController: UIViewController {
 
+    @IBOutlet weak var familyLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
+    var familyName: String = ""
+    var fonts : [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.familyLabel.text = "\(familyName)"
+        self.familyLabel.font = UIFont(name: familyName, size: 24)
 
         // Do any additional setup after loading the view.
     }
@@ -26,5 +35,11 @@ class DetailFontsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    
+    @IBAction func backHome(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

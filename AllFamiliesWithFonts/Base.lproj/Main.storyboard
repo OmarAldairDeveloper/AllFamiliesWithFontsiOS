@@ -37,6 +37,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="77Z-dF-oTr" kind="show" identifier="segueForDetail" id="RpV-j6-fV2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -54,6 +57,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="E7h-Ac-Led" id="ZCV-um-sLa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,6 +103,9 @@
                                 <state key="normal" title="Volver a las familias">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="backHome:" destination="77Z-dF-oTr" eventType="touchUpInside" id="dxh-ER-WGv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,6 +125,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Hq-hN-xTc"/>
                     </view>
+                    <connections>
+                        <outlet property="familyLabel" destination="m3b-7h-zX5" id="ZTg-1V-elP"/>
+                        <outlet property="textView" destination="af2-3P-X4f" id="TWx-ga-FAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srh-Rv-Ljk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
