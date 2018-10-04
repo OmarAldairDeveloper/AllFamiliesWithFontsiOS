@@ -75,6 +75,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nah-sy-3a1">
                                 <rect key="frame" x="10" y="102" width="355" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="77Z-dF-oTr" id="Qi8-rD-ai8"/>
+                                    <outlet property="delegate" destination="77Z-dF-oTr" id="Xdr-wI-5hh"/>
+                                </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="af2-3P-X4f">
                                 <rect key="frame" x="10" y="338" width="355" height="240"/>
@@ -127,6 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="familyLabel" destination="m3b-7h-zX5" id="ZTg-1V-elP"/>
+                        <outlet property="fontsPickerView" destination="nah-sy-3a1" id="rdk-2m-6BU"/>
                         <outlet property="textView" destination="af2-3P-X4f" id="TWx-ga-FAi"/>
                     </connections>
                 </viewController>

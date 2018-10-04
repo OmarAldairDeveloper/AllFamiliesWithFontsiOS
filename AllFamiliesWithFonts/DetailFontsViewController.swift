@@ -8,10 +8,13 @@
 
 import UIKit
 
-class DetailFontsViewController: UIViewController {
+class DetailFontsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+  
+    
 
     @IBOutlet weak var familyLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var fontsPickerView: UIPickerView!
     
     var familyName: String = ""
     var fonts : [String] = []
@@ -21,6 +24,10 @@ class DetailFontsViewController: UIViewController {
         
         self.familyLabel.text = "\(familyName)"
         self.familyLabel.font = UIFont(name: familyName, size: 24)
+        
+        if fonts.count <= 0{
+            self.fontsPickerView.isHidden = true
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -40,6 +47,26 @@ class DetailFontsViewController: UIViewController {
     
     @IBAction func backHome(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // MARK: UIPickerViewDataSource
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.fonts.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return fonts[row]
+    }
+    
+    // MARK: UIPickerViewDelegate
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let font = self.fonts[row]
+        self.textView.font = UIFont(name: font, size: 14)
     }
     
 }
