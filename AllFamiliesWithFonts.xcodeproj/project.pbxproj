@@ -12,6 +12,7 @@
 		EDE6C2F921667FE900009280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE6C2F721667FE900009280 /* Main.storyboard */; };
 		EDE6C2FB21667FEA00009280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE6C2FA21667FEA00009280 /* Assets.xcassets */; };
 		EDE6C2FE21667FEA00009280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE6C2FC21667FEA00009280 /* LaunchScreen.storyboard */; };
+		EDE6C306216687AD00009280 /* DetailFontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6C305216687AD00009280 /* DetailFontsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EDE6C2FA21667FEA00009280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE6C2FD21667FEA00009280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDE6C2FF21667FEA00009280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE6C305216687AD00009280 /* DetailFontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFontsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				EDE6C2FA21667FEA00009280 /* Assets.xcassets */,
 				EDE6C2FC21667FEA00009280 /* LaunchScreen.storyboard */,
 				EDE6C2FF21667FEA00009280 /* Info.plist */,
+				EDE6C305216687AD00009280 /* DetailFontsViewController.swift */,
 			);
 			path = AllFamiliesWithFonts;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE6C306216687AD00009280 /* DetailFontsViewController.swift in Sources */,
 				EDE6C2F621667FE800009280 /* ViewController.swift in Sources */,
 				EDE6C2F421667FE800009280 /* AppDelegate.swift in Sources */,
 			);
