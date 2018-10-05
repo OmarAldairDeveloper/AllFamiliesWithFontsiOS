@@ -27,7 +27,11 @@ class DetailFontsViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         if fonts.count <= 0{
             self.fontsPickerView.isHidden = true
+        } else{
+            self.textView.font = UIFont(name: self.fonts[0], size: 14)
         }
+        
+        
 
         // Do any additional setup after loading the view.
     }
